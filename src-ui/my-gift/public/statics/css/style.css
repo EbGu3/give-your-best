@@ -9,3 +9,11 @@
 .icon {
   color: var(--color-text-2) !important;
 }
+
+.icon:hover {
+  background: var(--primary) !important;
+  padding: 0.2rem;
+  border-radius: 1rem;
+}
+
+

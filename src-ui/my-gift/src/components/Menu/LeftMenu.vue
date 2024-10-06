@@ -25,7 +25,7 @@
           name="las la-book"
           class="icon-option"
         >
-        <tool-tip-e :text="'Ayuda'"></tool-tip-e>
+        <tool-tip-e :text="'Contenido'"></tool-tip-e>
         </q-icon>
       </div>
     </section>
@@ -70,7 +70,7 @@ import ToolTipE from '../Help/ToolTipE.vue';
 
 .line {
   margin-top: 0.5rem;
-  width: 2rem;
+  width: 2.2rem;
   height: 0.1rem;
   background: var(--color-text-2) !important;
 }
