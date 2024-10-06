@@ -1,5 +1,11 @@
 :root {
   --primary: #a57028;
   --secundary: #546551;
+  --three: #44aeda;
   --color-text-1: #fff;
+  --color-text-2: #ffffffdb;
+}
+
+.icon {
+  color: var(--color-text-2) !important;
 }
