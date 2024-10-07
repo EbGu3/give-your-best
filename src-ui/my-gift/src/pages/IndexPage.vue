@@ -28,6 +28,7 @@ defineOptions({
 .architecture {
   display: grid;
   grid-template-columns: 0.1fr 4fr;
+  background: var(--color-text-3);
 }
 
 </style>
