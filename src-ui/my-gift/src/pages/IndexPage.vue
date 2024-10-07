@@ -3,35 +3,23 @@
     class="architecture"
   >
     <left-menu></left-menu>
-    
-    <section>
-      <!--Vista principal-->
-      <web-view v-if="isSizeLaptop"></web-view>
-      <text-principal v-else></text-principal>
-    </section>
+
+    <!--Vista principal-->
+    <principal-view></principal-view>
+    <content-view></content-view>
   </q-page>
 </template>
 
 <script setup>
 
-import WebView from 'src/components/Options/Inicio/WebView.vue';
-import TextPrincipal from 'src/components/Options/Inicio/TextPrincipal.vue';
 import LeftMenu from 'src/components/Menu/LeftMenu.vue';
-import { ref, onMounted } from 'vue'
+import PrincipalView from 'src/components/Options/Inicio/PrincipalView.vue';
+import ContentView from 'src/components/Options/Content/ContentView.vue';
 
 defineOptions({
   name: 'IndexPage'
 });
 
-const isSizeLaptop = ref(true)
-onMounted(() => {
-  window.addEventListener('resize', watchSize)
-})
-
-const watchSize = () => {
-  const maxWidth = 620
-  isSizeLaptop.value = window.innerWidth > maxWidth
-}
 
 </script>
 

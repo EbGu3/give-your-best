@@ -1,8 +1,5 @@
 <template>
-  <Transition
-    appear
-    name="simple-appear"
-  >
+  <SimpleAppear>
     <section
       class="menu-left"
     > 
@@ -12,43 +9,37 @@
           name="las la-campground"
           class="icon icon-principal"
           size="sm"
+          @click="store.enablePrincipalView()"
         >
           <tool-tip-e :text="'Inicio'"></tool-tip-e>
         </q-icon>
         <div class="line"></div>
       </q-item>
-
-
+  
+  
       <div class="options">
         <q-icon 
           size="sm"
           name="las la-book"
           class="icon-option"
+          @click="store.enableContentView()"
         >
         <tool-tip-e :text="'Contenido'"></tool-tip-e>
         </q-icon>
       </div>
     </section>
-  </Transition>
+  </SimpleAppear>
 </template>
 
 <script setup>
+import SimpleAppear from '../Transition/SimpleAppear.vue';
 import ToolTipE from '../Help/ToolTipE.vue';
+import { store } from 'src/composables/LeftMenu/storeView';
+
 
 </script>
 
 <style scoped>
-
-.simple-appear-enter-active,
-.simple-appear-leave-active {
-  transition: opacity 3s ease;
-}
-
-.simple-appear-enter-from,
-.simple-appear-leave-to {
-  opacity: 0;
-}
-
 .menu-left {
   background: var(--secundary);
   margin: 2rem 0rem 2rem 1rem;

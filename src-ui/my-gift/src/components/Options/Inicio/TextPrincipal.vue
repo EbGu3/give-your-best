@@ -35,10 +35,7 @@
             <section
               class="card-thanks"
             >
-              <Transition
-                appear
-                name="simple-appear"
-              >
+              <simple-appear>
                 <section>
                   <div class="person">
                     <span class="name">{{ message.person }}</span>
@@ -48,7 +45,7 @@
                       {{ message.text }}
                   </p>
                 </section>
-              </Transition>
+              </simple-appear>
             </section>
           </div>
         </div>
@@ -59,6 +56,7 @@
 </template>
 
 <script setup>
+import SimpleAppear from 'src/components/Transition/SimpleAppear.vue';
 import { ref, onMounted } from 'vue'
 
 
@@ -79,12 +77,12 @@ const messages = ref([
     text: 'Me brindas tu apoyo, amor y consejos. que cada día me transforman'
   },
   {
-    person: 'Hermano, Hermana',
-    text: 'Son mis amigos y consejeros, hacen un trabajo maravilloso como hermanos.'
-  },
-  {
     person: 'Rubiely',
     text: 'Tu amor me ha hecho mucho bien. Llenas de alegría mi corazón. Tú eres el mejor regalo.'
+  },
+  {
+    person: 'Hermano, Hermana',
+    text: 'Son mis amigos y consejeros, hacen un trabajo maravilloso como hermanos.'
   }
 ])
 
@@ -178,16 +176,6 @@ const messages = ref([
 
 .just-cent {
   justify-content: center;
-}
-
-.simple-appear-enter-active,
-.simple-appear-leave-active {
-  transition: opacity 3s ease;
-}
-
-.simple-appear-enter-from,
-.simple-appear-leave-to {
-  opacity: 0;
 }
 
 </style>

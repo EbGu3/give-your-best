@@ -69,6 +69,9 @@ module.exports = configure(function (/* ctx */) {
 
       // extendViteConf (viteConf) {},
       // viteVuePluginOptions: {},
+      extendViteConf (viteConf) {
+        viteConf.base = './'
+      },
 
       vitePlugins: [
         ['vite-plugin-checker', {
